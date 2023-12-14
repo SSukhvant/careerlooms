@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import homeimg from "@/assets/home-Illustration.png";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import images from "./common/images";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 const features = [
   {
     name: "100% Verified",
@@ -33,8 +35,9 @@ const features = [
 ];
 
 const Hero = () => {
+  const {theme} = useTheme()
   return (
-    <section className="bg-[#F7F7F8] pt-20">
+    <section className="bg-[#F7F7F8] dark:bg-[#010409] pt-20">
       <div className="container-layout py-20">
         <div className="flex justify-between items-center flex-col lg:flex-row">
           <div className="w-auto lg:w-[500px] order-2 lg:order-1 mt-4 lg:mt-0">
@@ -61,18 +64,18 @@ const Hero = () => {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="relative pl-20 shadow-lg pt-4 pb-4 border bg-white rounded-lg"
+                className="relative pl-20 shadow-lg pt-4 pb-4 border dark:border-[#21262D] bg-white dark:bg-[#0D1117] rounded-lg"
               >
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#E7F0FA]">
+                <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-[#E6EDF3]">
+                  <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#E7F0FA] dark:bg-[#0D1117] border dark:border-[#21262D]">
                     <feature.icon
-                      className="h-6 w-6 text-blue-700"
+                      className="h-6 w-6 text-blue-700 dark:text-[#848D97]"
                       aria-hidden="true"
                     />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
+                <dd className="mt-2 text-base leading-7 text-gray-600 dark:text-[#848D97]">
                   {feature.description}
                 </dd>
               </div>
@@ -97,7 +100,7 @@ const Hero = () => {
           />
           <Image
             className="col-span-2 max-h-6 sm:max-h-8 w-full object-contain lg:col-span-1"
-            src={images.amazonlogo}
+            src={theme ==="dark" ? images.amazonWhite : images.amazonlogo}
             alt="Tuple"
             width={158}
             height={48}

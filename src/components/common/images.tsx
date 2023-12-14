@@ -4,6 +4,8 @@ import cognizantlogo from '@/assets/Cognizant.svg'
 import googlelogo from '@/assets/Google-Logo.svg'
 import amazonlogo from '@/assets/amazon.svg'
 import about from '@/assets/about.svg'
+import deloitteWhite from '@/assets/deloitteWhite.svg'
+import amazonWhite from '@/assets/amazonWhite.svg'
 
 const images = {
     infosyslogo,
@@ -11,7 +13,9 @@ const images = {
     cognizantlogo,
     googlelogo,
     amazonlogo,
-    about    
+    about,
+    deloitteWhite,
+    amazonWhite    
 };
 
 export default images;
