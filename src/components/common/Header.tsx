@@ -1,11 +1,10 @@
 "use client"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3BottomRightIcon, MoonIcon, PlusSmallIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-// import useDarkMode from '@/hooks/useDarkMode'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -16,12 +15,20 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const {theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  // Set mounted to true after the component has mounted
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const themeIcon = mounted ? (resolvedTheme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />) : null;
 
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-[#010409] border-b py-[8px] dark:bg-dark-card dark:border-slate-800">
+    <div className="sticky top-0 z-50 bg-white dark:bg-[#010409] border-b py-[8px] dark:bg-dark-card dark:border-[#30363D]">
      <nav className="container-layout flex justify-between items-center ">
-      <div className="logo text-sm font-semibold text-gray-900 dark:text-[#E6EDF3]">
+      <div className="logo text-lg font-bold text-gray-900 dark:text-[#E6EDF3]">
       CareerLooms
       </div>
       <div className="hidden lg:flex">
@@ -35,14 +42,16 @@ export default function Header() {
 
       </div>
       <div className="flex-center gap-4">
+        {mounted && 
           <button
             className="icon-box text-gray-900 dark:text-[#E6EDF3] bg-slate-100 hover:bg-slate-200 dark:bg-slate-800"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+           {themeIcon}
           </button>
+}
         <Link href="/" className="btn bg-[#07ae7133] text-[#0CA075] text-sm font-semibold flex justify-center items-center gap-2">
-          <PlusSmallIcon className="h-5 w-5"/> Post Job
+          <PlusSmallIcon className="h-5 w-5"/> Post a Job
         </Link>
         <div className="icon-box lg:hidden" onClick={() => setMobileMenuOpen(true)}>
           <Bars3BottomRightIcon className="h-6 w-6"/>

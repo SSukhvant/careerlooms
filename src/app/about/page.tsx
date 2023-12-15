@@ -100,7 +100,7 @@ const Page = () => {
 
   return (
     <>
-    <div className="bg-[#f1f2f4]">
+    <div className="bg-[#f1f2f4] dark:bg-[#0D1117]">
       <div className="mx-auto container-layout px-4">
         <div className="flex flex-col items-center gap-x-4 gap-y-4 py-24 md:flex-row">
           <div className="flex-1">

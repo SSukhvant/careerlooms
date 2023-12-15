@@ -1,5 +1,5 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import homeimg from "@/assets/home-Illustration.png";
 import Image from "next/image";
 import {
@@ -35,9 +35,15 @@ const features = [
 ];
 
 const Hero = () => {
-  const {theme} = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  // Set mounted to true after the component has mounted
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
-    <section className="bg-[#F7F7F8] dark:bg-[#010409] pt-20">
+    <section className="bg-[#F7F7F8] dark:bg-[#0D1117] pt-20">
       <div className="container-layout py-20">
         <div className="flex justify-between items-center flex-col lg:flex-row">
           <div className="w-auto lg:w-[500px] order-2 lg:order-1 mt-4 lg:mt-0">
@@ -46,16 +52,18 @@ const Hero = () => {
               your interest & skills.
             </h1>
             <p>
-            Explore career opportunities that resonate with your passions and abilities. Find jobs tailored to your interests, such as software development, marketing, or project management etc.
+              Explore career opportunities that resonate with your passions and
+              abilities. Find jobs tailored to your interests, such as software
+              development, marketing, or project management etc.
             </p>
             <div className="mt-8">
-            <Link href="/jobs" className="btn bg-blue-700 text-white">
-              Get Started
-            </Link>
+              <Link href="/jobs" className="btn bg-blue-700 text-white">
+                Get Started
+              </Link>
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <Image src={homeimg} alt="home" />
+            <Image src={homeimg} alt="home" priority />
           </div>
         </div>
 
@@ -98,13 +106,19 @@ const Hero = () => {
             width={158}
             height={48}
           />
-          <Image
-            className="col-span-2 max-h-6 sm:max-h-8 w-full object-contain lg:col-span-1"
-            src={theme ==="dark" ? images.amazonWhite : images.amazonlogo}
-            alt="Tuple"
-            width={158}
-            height={48}
-          />
+          {mounted && (
+            <Image
+              className="col-span-2 max-h-6 sm:max-h-8 w-full object-contain lg:col-span-1"
+              src={
+                resolvedTheme === "dark"
+                  ? images.amazonWhite
+                  : images.amazonlogo
+              }
+              alt="Tuple"
+              width={158}
+              height={48}
+            />
+          )}
           <Image
             className="col-span-2 max-h-6 sm:max-h-8 w-full object-contain sm:col-start-2 lg:col-span-1"
             src={images.cognizantlogo}
@@ -112,13 +126,19 @@ const Hero = () => {
             width={158}
             height={48}
           />
-          <Image
-            className="col-span-2 col-start-2 max-h-6 sm:max-h-8 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src={images.deloittelogo}
-            alt="Statamic"
-            width={158}
-            height={48}
-          />
+          {mounted && (
+            <Image
+              className="col-span-2 col-start-2 max-h-6 sm:max-h-8 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src={
+                resolvedTheme === "dark"
+                  ? images.deloitteWhite
+                  : images.deloittelogo
+              }
+              alt="Statamic"
+              width={158}
+              height={48}
+            />
+          )}
         </div>
       </div>
     </section>

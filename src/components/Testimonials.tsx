@@ -13,28 +13,28 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "WebDev.com",
+    name: "CareerLooms",
     message:
       "We have a great business relationship with WebDev. We had worked with several other marketing companies in the past who did not deliver results and I am happy to say WebDev is doing that for us. They help bring our vision to life in a way that makes sense",
     imgUrl: images.googlelogo,
   },
   {
     id: 2,
-    name: "WebDev.com",
+    name: "CareerLooms",
     message:
       "WebDev has done a wonderful job redesigning our website to take it from plain and functional to amazingly professional. We would highly recommend WebDev to any business that needs a hand improving their internet traffic or their business.",
     imgUrl: images.googlelogo,
   },
   {
     id: 3,
-    name: "WebDev.com",
+    name: "CareerLooms",
     message:
       "We have a great business relationship with WebDev. We had worked with several other marketing companies in the past who did not deliver results and I am happy to say WebDev is doing that for us. They help bring our vision to life in a way that makes sense",
     imgUrl: images.googlelogo,
   },
   {
     id: 4,
-    name: "WebDev.com",
+    name: "CareerLooms",
     message:
       "We have a great business relationship with WebDev. We had worked with several other marketing companies in the past who did not deliver results and I am happy to say WebDev is doing that for us. They help bring our vision to life in a way that makes sense",
     imgUrl: images.googlelogo,
@@ -52,7 +52,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="pb-24 pt-24 sm:pt-28 sm:pb-40 bg-[#f1f2f4]">
+    <section className="pb-24 pt-24 sm:pt-28 sm:pb-40 bg-[#f1f2f4] dark:bg-[#0D1117]">
       <div className="container-layout grid grid-cols-1 md:grid-cols-2">
         <div className="relative h-60 lg:h-64">
           <ChatBubbleLeftRightIcon className="absolute h-60 w-60 md:bottom-12 right-12 text-blue-700 opacity-20" />
@@ -67,7 +67,7 @@ const Testimonials = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white shadow-lg p-6 flex-center border rounded-xl mt-8">
+        <div className="bg-white dark:bg-[#161B22] shadow-lg p-6 flex-center border dark:border-[#30363D] rounded-xl mt-8">
           {/* <Image
             src={image}
             className="absolute bottom-0 right-2"

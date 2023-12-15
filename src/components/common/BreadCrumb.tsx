@@ -4,13 +4,13 @@ import React from 'react'
 
 const BreadCrumb = ({path}: any) => {
   return (
-    <nav className="flex w-full items-start rounded-md bg-gray-100 py-8" aria-label="Breadcrumb">
+    <nav className="flex w-full items-start rounded-md bg-gray-100 dark:bg-[#171B20] py-8" aria-label="Breadcrumb">
     <div className="container-layout">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         <li className="inline-flex items-center">
           <Link
             href="/"
-            className="inline-flex text-sm font-medium text-gray-800 hover:underline"
+            className="inline-flex text-sm font-medium text-gray-800 dark:text-[#E6EDF3] hover:underline"
           >
             <HomeIcon className="mr-4 h-4 w-4" />
             Home
@@ -18,8 +18,8 @@ const BreadCrumb = ({path}: any) => {
         </li>
         <li>
           <div className="flex items-center">
-            <span className="mx-2.5 text-gray-800 ">/</span>
-            <h1 className="ml-1 text-sm font-medium text-gray-800 hover:underline md:ml-2">
+            <span className="mx-2.5 text-gray-800 dark:text-[#E6EDF3]">/</span>
+            <h1 className="ml-1 text-sm font-medium text-gray-800 dark:text-[#E6EDF3] md:ml-2">
               {path}
             </h1>
           </div>

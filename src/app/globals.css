@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+}
+
 
 .btn {
   @apply px-4 py-[0.8rem] rounded-md transition-all sm:cursor-pointer capitalize flex-shrink-0;
@@ -34,6 +45,14 @@
 .slide-test.activeSlider-test {
   @apply opacity-100 
 }
+
+/* .ql-snow .ql-picker-label {
+  @apply dark:!text-[#E6EDF3]
+}
+
+.ql-strok {
+  @apply dark:!text-[#E6EDF3]
+} */
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

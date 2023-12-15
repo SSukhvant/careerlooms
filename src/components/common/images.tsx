@@ -1,3 +1,4 @@
+"use client"
 import infosyslogo from '@/assets/infosys.svg'
 import deloittelogo from '@/assets/deloitte.svg'
 import cognizantlogo from '@/assets/Cognizant.svg'
