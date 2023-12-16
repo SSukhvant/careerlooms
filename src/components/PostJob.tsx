@@ -53,8 +53,9 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="first-name"
                   id="first-name"
+                  placeholder="eg. Software Developer"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -68,13 +69,14 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="last-name"
                   id="last-name"
+                  placeholder="eg. Google"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-3">
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900 dark:text-[#E6EDF3]">
                 Job Level
               </label>
@@ -83,13 +85,14 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="first-name"
                   id="first-name"
+                  placeholder="eg. Fresher"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-3">
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900 dark:text-[#E6EDF3]">
               Types of Employment
               </label>
@@ -98,13 +101,14 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="first-name"
                   id="first-name"
+                  placeholder="eg. Full-Time"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-3">
               <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900 dark:text-[#E6EDF3]">
               Salary
               </label>
@@ -113,8 +117,25 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="last-name"
                   id="last-name"
+                  placeholder="eg. 10 LPA - 12 LPA"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-3">
+              <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900 dark:text-[#E6EDF3]">
+              Apply URL
+              </label>
+              <div className="mt-2">
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="https://www.google.com/jobs/software-developer"
+                  autoComplete="family-name"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -128,8 +149,9 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="city"
                   id="city"
+                  placeholder="eg. Gurgaon"
                   autoComplete="address-level2"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -143,8 +165,9 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="region"
                   id="region"
+                  placeholder="eg. Haryana"
                   autoComplete="address-level1"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -158,8 +181,9 @@ const PostJob: React.FC = () => {
                   type="text"
                   name="postal-code"
                   id="postal-code"
+                  placeholder="eg. India"
                   autoComplete="postal-code"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:text-[#E6EDF3] focus:ring-2 dark:ring-[#30363D] dark:focus:bg-[#161B22] dark:bg-[#161B22] placeholder:text-gray-400 focus:outline-none pl-2 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -168,7 +192,7 @@ const PostJob: React.FC = () => {
               <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900 dark:text-[#E6EDF3]">
                 Job Description
               </label>
-              <ReactQuill theme="snow" className="border-0 text-gray-900 dark:text-[#E6EDF3] border-gray-300 dark:border-[#30363D] dark:bg-[#161B22]" value={value} onChange={setValue} />
+              <ReactQuill theme="snow" className="border-0 mt-2 text-gray-900 dark:text-[#E6EDF3] border-gray-300 dark:border-[#30363D] dark:bg-[#161B22]" value={value} onChange={setValue} />
              
             </div>
           </div>
