@@ -39,13 +39,13 @@ const people = [
   },
 ]
 
-export function PostList() {
+export function BlogList() {
   return (
     <section className="dark:bg-[#0D1117]">
       <div className="container-layout px-4 py-4">
         <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
-            <h2 className="text-lg font-semibold">Posts</h2>
+            <h2 className="text-lg font-semibold">Blogs</h2>
             <p className="mt-1 text-sm text-gray-700 dark:text-[#848D97]">
               This is a list of all employees. You can add new employees, edit or delete existing
               ones.
@@ -56,7 +56,7 @@ export function PostList() {
               type="button"
               className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Post A Job
+              Post A Blog
             </button>
           </div>
         </div>

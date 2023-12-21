@@ -8,7 +8,7 @@ const SectionNavbar = () => {
       <ol className="inline-flex items-center space-x-4 md:space-x-6">
         <li className="inline-flex items-center">
           <Link
-            href="/"
+            href="/dashboard"
             className="inline-flex text-sm font-medium text-gray-800 dark:text-[#E6EDF3] border-b border-transparent hover:border-[#E6EDF3] transition delay-100 ease-linear pb-4"
           >
             {/* <HomeIcon className="mr-4 h-4 w-4" /> */}
@@ -18,7 +18,7 @@ const SectionNavbar = () => {
 
         <li className="inline-flex items-center">
           <Link
-            href="/"
+            href="/dashboard/category"
             className="inline-flex text-sm font-medium text-gray-800 dark:text-[#E6EDF3] border-b border-transparent hover:border-[#E6EDF3] transition delay-100 ease-linear pb-4"
           >
             {/* <HomeIcon className="mr-4 h-4 w-4" /> */}
@@ -28,7 +28,7 @@ const SectionNavbar = () => {
 
         <li className="inline-flex items-center">
           <Link
-            href="/"
+            href="/dashboard/subscribers"
             className="inline-flex text-sm font-medium text-gray-800 dark:text-[#E6EDF3] border-b border-transparent hover:border-[#E6EDF3] transition delay-100 ease-linear pb-4"
           >
             {/* <HomeIcon className="mr-4 h-4 w-4" /> */}
@@ -38,7 +38,7 @@ const SectionNavbar = () => {
 
         <li className="inline-flex items-center">
           <Link
-            href="/"
+            href="/dashboard/messages"
             className="inline-flex text-sm font-medium text-gray-800 dark:text-[#E6EDF3] border-b border-transparent hover:border-[#E6EDF3] transition delay-100 ease-linear pb-4"
           >
             {/* <HomeIcon className="mr-4 h-4 w-4" /> */}
